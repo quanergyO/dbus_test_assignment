@@ -22,7 +22,7 @@ clean:
 
 install: clean
 	mkdir build
-	cd build && qmake ../model.pro && make
+	cd build && qmake ../creditCalcModel.pro && make
 
 uninstall:
 	rm -rf build

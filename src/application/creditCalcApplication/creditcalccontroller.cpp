@@ -14,7 +14,7 @@ QStringList CreditCalcController::calculate(const QString &totalLoanAmount,
         auto answer = model.calculate();
         QStringList returnValue;
         for (const auto &string : answer) {
-            returnValue.emplaceBack(QString::fromStdString(string));
+            returnValue.append(QString::fromStdString(string));
         }
         return returnValue;
     } catch (std::exception &e) {

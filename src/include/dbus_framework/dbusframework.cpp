@@ -15,6 +15,6 @@ QVariant DbusFramework::callMethod(const QString &serviceName, const QString &me
     } catch (const std::out_of_range &e) {
         return QVariant("Service doesn't exist");
     } catch (const std::exception &e) {
-        return QVariant::fromValue(e.what());
+        return QVariant::fromValue(QString(e.what()));
     }
 }

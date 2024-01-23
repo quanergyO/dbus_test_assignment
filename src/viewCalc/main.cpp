@@ -12,8 +12,8 @@ int main(int argc, char *argv[]) {
   auto adaptor = std::make_unique<DbusFrameworkAdaptor>(controller.get());
   auto service = std::make_unique<ApplicationService>(adaptor.get());
   controller->registerService("CreditCalc",
-                              "ru.model.CreditCalc",
-                              "/ru/model/CreditCalc",
+                              "ru.credit.CreditCalc",
+                              "/ru/credit/CreditCalc",
                               "ru.credit.CreditCalc");
   controller->registerService("SmartCalc",
                               "ru.model.SmartCalc",

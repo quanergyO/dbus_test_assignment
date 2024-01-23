@@ -1,3 +1,7 @@
+all: install start
+	make install
+	make start
+
 start:
 	./model/smartCalcModel/build/model &
 	./model/creditCalcModel/build/creditCalcModel &

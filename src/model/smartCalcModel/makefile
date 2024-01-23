@@ -19,7 +19,6 @@ gcov_report: tests
 
 clean:
 	rm -rf *.o *.out *.gch *.dSYM *.gcov *.gcda *.gcno *.a *.css *.html *.info test test_asan report html
-.PHONY: tests clean gcov_report style
 
 install: clean
 	mkdir build

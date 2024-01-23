@@ -18,7 +18,7 @@ gcov_report: tests
 	open ./report/coverage.html
 
 clean:
-	rm -rf *.o *.out *.gch *.dSYM *.gcov *.gcda *.gcno *.a *.css *.html *.info test test_asan report
+	rm -rf *.o *.out *.gch *.dSYM *.gcov *.gcda *.gcno *.a *.css *.html *.info test test_asan report html
 .PHONY: tests clean gcov_report style
 
 install: clean

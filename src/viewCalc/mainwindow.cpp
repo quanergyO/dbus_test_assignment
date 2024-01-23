@@ -1,7 +1,7 @@
 #include "mainwindow.h"
+
 #include "./creditwindow.h"
 #include "./ui_mainwindow.h"
-
 
 MainWindow::MainWindow(std::unique_ptr<DbusFramework> &dbus, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), dbus_(dbus) {
@@ -17,7 +17,10 @@ void MainWindow::buttons() {
 }
 
 void MainWindow::on_pushButton_equal_clicked() {
-    ui->lineEdit->setText(dbus_->callMethod("SmartCalc", "calculateExpression", {ui->lineEdit->text().toLower()}).toString());
+  ui->lineEdit->setText(dbus_
+                            ->callMethod("SmartCalc", "calculateExpression",
+                                         {ui->lineEdit->text().toLower()})
+                            .toString());
 }
 
 void MainWindow::on_pushButton_clear_clicked() { ui->lineEdit->clear(); }

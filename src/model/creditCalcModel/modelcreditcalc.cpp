@@ -7,7 +7,11 @@
 
 namespace s21 {
 std::vector<std::string> ModelCreditCalc::calculate() const noexcept {
+  try {
     return isAnnuity_ ? annuityCredit() : differentiatedCredit();
+  } catch (...) {
+    return {"Error", "Error", "Error"};
+  }
 }
 
 std::vector<std::string> ModelCreditCalc::annuityCredit() const noexcept {
